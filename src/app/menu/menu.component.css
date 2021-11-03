@@ -1,5 +1,11 @@
-.login p{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+.fs-26{
+    font-size: 20px;
+    font-family: Arial;
+}
+.a{
+    cursor: pointer;
+}
+
+ul.dropdown-menu li {
+    color: #65655E;
 }
