@@ -1,11 +1,10 @@
 .img{
     background-image: url("../../assets/img/Secure login-bro .png");
-    width: 100% ;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size:contain; 
-    padding: 100px; 
-    margin: auto;
+    padding: 100px;
+    
 }
 
 .container {
@@ -17,15 +16,14 @@
   }
   
   .card {
-    background-color:#83837e66 ;
-
+    background-color: #83837e66;
     padding: 30px;
     border-radius: 11%;
     min-width: 350px;
     max-width: 500px;
   }
 
-  button{
+  .cadastrar{
     background-color: #D9FF70;
     border-color: #1c1c1c;
     color: #fff;
@@ -41,10 +39,32 @@
     min-width: 95%
   }
 
-  button:hover{
+  .cancelar{
+    background-color: #D9FF70;
+    border-color: #D9FF70;
+    color: #422157;
+    
+    padding: 7px;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 20px;
+    border-radius: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+    min-width: 95%
+  }
+
+  .cadastrar:hover{
     background-color: #FFDF64;
     border-color: #FFDF64;
     color: #2c0346;
+  }
+
+  .cancelar:hover{
+    background-color: red;
+    border-color: red;
+    color: #fff;
   }
   input{
       text-align: center;
