@@ -1,10 +1,16 @@
 .img{
-    background-image: url("../../assets/img/Secure login-bro .png");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size:contain; 
-    padding: 100px;
-    
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  ),
+
+  url("../../assets/img/Secure login-bro .png");
+  width:  100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70% 109%;
+  padding: 100px;
+  margin: auto;
 }
 
 .container {
@@ -14,7 +20,7 @@
     margin-top: 5px;
     padding: 100px;
   }
-  
+
   .card {
     background-color: #83837e66;
     padding: 30px;
@@ -27,7 +33,7 @@
     background-color: #D9FF70;
     border-color: #1c1c1c;
     color: #fff;
-    
+
     padding: 7px;
     font-weight: bold;
     font-size: 12pt;
@@ -43,7 +49,7 @@
     background-color: #D9FF70;
     border-color: #D9FF70;
     color: #422157;
-    
+
     padding: 7px;
     font-weight: bold;
     font-size: 12pt;
