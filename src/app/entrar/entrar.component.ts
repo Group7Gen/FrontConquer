@@ -1,3 +1,4 @@
+import { Usuario } from './../model/User';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -30,6 +31,7 @@ export class EntrarComponent implements OnInit {
       environment.nome = this.userLogin.nome
       environment.foto = this.userLogin.foto
       environment.id = this.userLogin.id
+      environment.usuario = this.userLogin.usuario
 
       console.log(environment.token)
 
@@ -44,7 +46,7 @@ export class EntrarComponent implements OnInit {
       if(erro.status == 500){
         alert('Usuario ou senha estão incorretos!')
       }
-    }) 
+    })
   }
 
 }

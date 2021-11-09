@@ -9,24 +9,24 @@
                 </div>
 
                 <div class="form-group">
-                    <input [(ngModel)]='user.email' class="form-control mt-3" type="email" name="email" id="email" placeholder="Seu E-mail">
-              
+                    <input  [(ngModel)]='usuario.usuario' class="form-control mt-3" type="text" name="email" id="email" placeholder="Seu E-mail">
+
                 </div>
 
                 <div class="form-group">
-                    <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Seu Nome">
+                    <input  [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Seu Nome">
                 </div>
 
                 <div class="form-group">
-                    <input [(ngModel)]='user.text' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
+                    <input  [(ngModel)]='usuario.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
                 </div>
 
                 <div class="form-group">
-                    <input (input)='confirmarSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
+                    <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
                 </div>
 
                 <div class="form-group">
-                    <input [(ngModel)]='user.senha' class="form-control mb-3" type="password" name="confirmarSenha" id="confirmarSenha"
+                    <input [(ngModel)]='usuario.senha' class="form-control mb-3" type="password" name="confirmarSenha" id="confirmarSenha"
                         placeholder="Confirme sua senha">
                 </div>
 
