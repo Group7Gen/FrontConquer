@@ -13,6 +13,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     EntrarComponent,
     CadastrarComponent,
     InicioComponent,
-    SobreNosComponent
+    SobreNosComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
