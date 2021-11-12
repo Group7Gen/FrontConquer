@@ -14,6 +14,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ContatoComponent } from './contato/contato.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ContatoComponent } from './contato/contato.component';
     CadastrarComponent,
     InicioComponent,
     SobreNosComponent,
-    ContatoComponent
+    ContatoComponent,
+    CategoriaComponent,
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,
