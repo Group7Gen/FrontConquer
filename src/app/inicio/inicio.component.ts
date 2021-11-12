@@ -24,7 +24,6 @@ export class InicioComponent implements OnInit {
     if(environment.token == ''){
       this.router.navigate(['entrar'])
     }
-
   }
 
 }
