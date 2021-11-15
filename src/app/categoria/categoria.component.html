@@ -51,9 +51,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr >
-            <th></th>
-            <td></td>
+          <tr *ngFor='let categoria of listaCategorias'>
+            <th>{{categoria.tipo}}</th>
+            <td>{{categoria.organizacao}}</td>
             <td class="d-flex justify-content-end">
               <a class="btn btn-info mr-3" >Editar</a>
               <button class="btn btn-danger" >Apagar</button>
