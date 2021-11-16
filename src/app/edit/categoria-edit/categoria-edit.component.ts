@@ -35,4 +35,12 @@ export class CategoriaEditComponent implements OnInit {
     })
   }
 
+  atualizar(){
+    this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria)=>{
+      this.categoria = resp
+      alert("tema atualizado com sucesso!")
+      this.router.navigate(['/categoria'])
+    })
+  }
+
 }
