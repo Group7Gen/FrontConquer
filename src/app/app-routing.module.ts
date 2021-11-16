@@ -1,3 +1,5 @@
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
@@ -22,12 +24,11 @@ const routes: Routes = [
 
 {path:'categoria', component: CategoriaComponent},
 
-{path:'produto', component: ProdutoComponent}
+{path:'produto', component: ProdutoComponent},
 
+{path: 'categoria-edit/:id', component: CategoriaEditComponent},
 
-//{path:'categoria-edit/:id', component: CategoriaEditComponent}
-
-//{path:'categoria-delete/:id', component: CategoriaDeleteComponent}
+{path:'categoria-delete/:id', component: CategoriaDeleteComponent}
 
 ];
 

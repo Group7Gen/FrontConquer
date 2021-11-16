@@ -45,9 +45,9 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Tipo</th>
-            <th class="text-right" scope="col">Modificações</th>
+            <th scope="col">organização</th>
+
           </tr>
         </thead>
         <tbody>
@@ -55,8 +55,8 @@
             <th>{{categoria.tipo}}</th>
             <td>{{categoria.organizacao}}</td>
             <td class="d-flex justify-content-end">
-              <a class="btn btn-info mr-3" >Editar</a>
-              <button class="btn btn-danger" >Apagar</button>
+              <a class="btn btn-info mr-3" [routerLink]="['/categoria-edit', categoria.id]">Editar</a>
+              <button class="btn btn-danger"  [routerLink]="['/categoria-delete', categoria.id]" >Apagar</button>
             </td>
           </tr>
         </tbody>

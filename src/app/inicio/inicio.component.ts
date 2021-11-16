@@ -13,6 +13,11 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class InicioComponent implements OnInit {
 
+  categoria: Categoria = new Categoria()
+  listaCategorias: Categoria[]
+  idCategoria: number
+  nomeCategoria: string = ''
+
 
   constructor(
     private router: Router,
@@ -23,9 +28,27 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {
 
+    window.scroll(0, 0)
+
     if(environment.token == ''){
       this.router.navigate(['entrar'])
     }
+    this.findAllCategoria()
+    this.findByIdCategoria()
+
+  }
+
+
+  findAllCategoria(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+      this.listaCategorias = resp
+    })
+  }
+
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria = resp
+    })
   }
 
 }

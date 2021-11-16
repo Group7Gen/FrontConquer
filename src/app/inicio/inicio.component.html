@@ -9,13 +9,13 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row d-flex justify-content-end mt-3 mb-5">
             <div class="col-md-6">
                 <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#cadastroCurso">Novo Curso</button>
             </div>
         </div>
-    
+
     </div>
 </div>
 
@@ -95,6 +95,17 @@
                         <option value="cultura">Cultura</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                  <label for="categoria">Escolha seu Curso ou <a routerLink="/categoria" data-dismiss="modal">cadastre um novo</a>:
+                  </label>
+                  <select class="form-control" id="categorias"  [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
+                    <option *ngFor='let tema of listaCategorias' value='{{categoria.id}} value='>
+                      {{categoria.organizacao}}
+                    </option>
+                  </select>
+                </div>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>

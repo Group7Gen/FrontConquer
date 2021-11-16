@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
+import { AuthService } from '../service/auth.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -11,13 +12,14 @@ import { CategoriaService } from '../service/categoria.service';
 })
 export class CategoriaComponent implements OnInit {
 
-  categoria: Categoria = new Categoria() 
+  categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
 
   constructor(
     private router: Router,
-    private categoriaService:  CategoriaService
+    private categoriaService:  CategoriaService,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -27,7 +29,7 @@ export class CategoriaComponent implements OnInit {
     }
     this.findAllCategoria()
     }
-  
+
 
   findAllCategoria(){
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
