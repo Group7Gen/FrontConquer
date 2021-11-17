@@ -9,6 +9,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
+
 const routes: Routes = [
 
 // Alterar a rota de "entrar" para "inicio/ pagina principal"
@@ -29,6 +30,8 @@ const routes: Routes = [
 {path: 'categoria-edit/:id', component: CategoriaEditComponent},
 
 {path:'categoria-delete/:id', component: CategoriaDeleteComponent}
+
+
 
 ];
 

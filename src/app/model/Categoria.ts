@@ -5,6 +5,5 @@ export class Categoria{
      public tipo: string
      public organizacao: string
      public data: Date
-     public foto: string
      public produto: Produto[]
 }

@@ -15,15 +15,16 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class InicioComponent implements OnInit {
 
+  produto: Produto = new Produto()
+  listaProdutos: Produto[]
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
   nomeCategoria: string = ''
 
-
-
-
+  usuario: Usuario = new Usuario()
+  idUsuario = environment.id
 
   constructor(
     private router: Router,
@@ -39,16 +40,19 @@ export class InicioComponent implements OnInit {
     if (environment.token == '') {
       this.router.navigate(['entrar'])
     }
-
-    this.findAllCategoria()
-    this.findByIdCategoria()
-
-
+    //this.findAllCategoria()
+    //this.findByIdCategoria()
+    this.getAllCategorias()
+    this.getAllProdutos()
   }
 
+  // findAllCategoria() {
+  //   this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+  //     this.listaCategorias = resp
+  //   })
+  // }
 
-
-  findAllCategoria() {
+  getAllCategorias() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp
     })
@@ -60,6 +64,30 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  
+  getAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+    })
+  }
 
+  findByIdUsuario() {
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+      this.usuario = resp
+    })
+  }
+
+  publicar() {
+    this.categoria.id = this.idCategoria
+    this.produto.categoria = this.categoria
+
+    this.usuario.id = this.idUsuario
+    this.produto.usuario = this.usuario
+
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+      this.produto = resp
+      alert('Novo produto cadastrado com sucesso!')
+      this.produto = new Produto()
+      this.getAllProdutos()
+    })
+  }
 }

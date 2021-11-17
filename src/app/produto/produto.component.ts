@@ -29,7 +29,7 @@ export class ProdutoComponent implements OnInit {
   }
 
   findAllProdutos(){
-    this.produtoService.getAllProduto().subscribe((resp: Produto[])=>{
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
       this.listaProdutos = resp
     })
   }

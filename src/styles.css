@@ -4,3 +4,8 @@
     font-size: 28pt;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
