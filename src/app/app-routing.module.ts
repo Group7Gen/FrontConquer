@@ -8,11 +8,14 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 
 // Alterar a rota de "entrar" para "inicio/ pagina principal"
 {path:'', redirectTo: 'entrar', pathMatch:'full'},
+
+{path: 'home', component: HomeComponent},
 
 {path: 'entrar', component: EntrarComponent},
 

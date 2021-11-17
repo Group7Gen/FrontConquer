@@ -18,6 +18,10 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { HomeComponent } from './home/home.component';
+import { OdsComponent } from './ods/ods.component';
+import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
+import { SquadComponent } from './squad/squad.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
     CategoriaComponent,
     ProdutoComponent,
     CategoriaEditComponent,
-    CategoriaDeleteComponent
+    CategoriaDeleteComponent,
+    HomeComponent,
+    OdsComponent,
+    ComoFuncionaComponent,
+    SquadComponent
   ],
   imports: [
     BrowserModule,
